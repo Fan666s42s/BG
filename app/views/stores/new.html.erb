@@ -1,0 +1,28 @@
+<%= render '/shared/title', title: '店家註冊'%>
+
+<div class="well col-md-6">
+  <%= form_for @store do |f| %>
+  <div class="form-group">
+    <%= f.label :store_name %>
+    <br>
+    <%= f.text_field :store_name %>
+  </div>
+  <div class="form-group">
+    <%= f.label :email %>
+    <br>
+    <%= f.text_field :email%>
+  </div>
+  <div class="form-group">
+    <%= f.label :tax_ID %>
+    <br>
+    <%= f.text_field :tax_ID%>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+    <br>
+    <%= f.password_field :password%>
+  </div>
+  <br>
+  <%= f.submit(@store.new_record? ? 'Register' : 'Update Profile', class: 'btn btn-success') %>
+  <% end %>
+</div>

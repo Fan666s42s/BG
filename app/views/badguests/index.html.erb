@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<script src="jquery.js"></script>
+<script src="typed.js"></script>
+<script>
+    $(function(){
+        $(".element").typed({
+            strings: ["永遠都會公休", "永遠都會客滿"],
+            typeSpeed: 200,
+            startDelay: 1000,
+            backSpeed: 200,
+            backDelay: 1000,
+            showCursor: true,
+            cursorChar: "|",
+            loop: true
+
+        });
+    });
+</script>
+
+<div class="jumbotron text-center">
+  <h1>您選的日子</h1>
+  <span class="element" style="font-size: 20pt"></span>
+</div>
+<%= form_tag search_path , method: :get, :class => "form-group" do %>
+  <p>
+
+    <%= text_field_tag :search, params[:search] , class:"form-control",  placeholder:"請輸入想查詢的電話號碼"%>
+
+
+    <%= button_tag(type: "submit", class: "btn") do %>
+      <span class = "glyphicon glyphicon-search"></span>
+    <% end %>
+  </p>
+<% end %>
+
+<br>
+
+

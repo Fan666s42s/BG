@@ -1,0 +1,1 @@
+json.partial! "badguests/badguest", badguest: @badguest

@@ -1,0 +1,1 @@
+json.array! @badguests, partial: 'badguests/badguest', as: :badguest

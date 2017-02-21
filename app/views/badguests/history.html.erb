@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<%= render '/shared/title', title: '奧客紀錄'%>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phone</th>
+      <th>Desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @badguests.each do |badguest| %>
+      <tr>
+        <td><%= badguest.phone %></td>
+        <td><%= badguest.desc %></td>
+        <td><%= link_to 'Show', badguest ,class:'btn-success'%></td>
+        <% if logged_in? %>
+          <td><%= link_to 'Edit', edit_badguest_path(badguest) %></td>
+          <td><%= link_to 'Destroy', badguest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
