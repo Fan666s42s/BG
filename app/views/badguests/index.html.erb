@@ -25,7 +25,7 @@
 <%= form_tag search_path , method: :get, :class => "form-group" do %>
   <p>
 
-    <%= text_field_tag :search, params[:search] , class:"form-control",  placeholder:"請輸入想查詢的電話號碼", required: true %>
+    <%= text_field_tag :search, params[:search] , class:"form-control",  placeholder:"請輸入想查詢的電話號碼", required: true, oninvalid: "setCustomValidity('請輸入想查詢的電話號碼')", oninput:"setCustomValidity('')" %>
 
 
     <%= button_tag(type: "submit", class: "btn") do %>
