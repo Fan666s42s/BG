@@ -5,7 +5,7 @@
 <script>
     $(function(){
         $(".element").typed({
-            strings: ["永遠都會公休", "永遠都會客滿"],
+            strings: ["永遠都會公休", "永遠都會客滿", "永遠都訂不到位"],
             typeSpeed: 200,
             startDelay: 1000,
             backSpeed: 200,
@@ -25,7 +25,7 @@
 <%= form_tag search_path , method: :get, :class => "form-group" do %>
   <p>
 
-    <%= text_field_tag :search, params[:search] , class:"form-control",  placeholder:"請輸入想查詢的電話號碼"%>
+    <%= text_field_tag :search, params[:search] , class:"form-control",  placeholder:"請輸入想查詢的電話號碼", required: true %>
 
 
     <%= button_tag(type: "submit", class: "btn") do %>
