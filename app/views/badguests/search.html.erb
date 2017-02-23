@@ -1,29 +1,175 @@
 <link rel="stylesheet" href="stylesheet/circle.css">
 
 
-<h1><%= params[:search]%></h1>
+<table>
+	<td>
+		<h1><%= params[:search]%></h1>
+	</td>
 
+	<td>
+		<% case @credit_rank %>
+		<% when 1 %>		
+			<tr>
+				<td>
+					<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
+				</td>
+				<td>
+					<div class="c100 p10 rank5">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
 
-<% case @credit_rank %>
-<% when 1..3 %>
-  
-  <h2> 極度惡劣的客戶，建議不要提供服務 </h2>
-<% when 4..6 %>
-  <h2> 有許多不良紀錄，若要招待務必三思 </h2>
-<% when 7..9 %>
-  <h2> 有過不良紀錄 </h2>
-<% when 10%>
+		<% when 2 %>		
+			<tr>
+				<td>
+					<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
+				</td>
+				<td>
+					<div class="c100 p20 rank5">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
 
-  <div class="c100 p100 green">
-    <span><%= @credit_rank%></span>
-    <div class="slice">
-      <div class="bar"></div>
-      <div class="fill"></div>
-    </div>
-  </div>
+		<% when 3 %>		
+			<tr>
+				<td>
+					<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
+				</td>
+				<td>
+					<div class="c100 p30 rank5">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
 
-  <h2> 目前狀況良好 </h2>
-  <h4> 也有可能是沒被舉報... </h4>
-<% end %>
+		<% when 4 %>	
+			<tr>
+				<td>
+					<h2> 有許多不良紀錄，若要招待務必三思 </h2>
+				</td>
+				<td>
+					<div class="c100 p40 rank4">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		<% when 5 %>	
+			<tr>
+				<td>
+					<h2> 有許多不良紀錄，若要招待務必三思 </h2>
+				</td>
+				<td>
+					<div class="c100 p50 rank4">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		<% when 6 %>	
+			<tr>
+				<td>
+					<h2> 有許多不良紀錄，若要招待務必三思 </h2>
+				</td>
+				<td>
+					<div class="c100 p60 rank4">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		<% when 7 %>
+			<tr>
+				<td>
+					<h2> 有過不良紀錄 </h2>
+				</td>
+				<td>
+					<div class="c100 p70 rank3">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		
+		<% when 8 %>
+			<tr>
+				<td>
+					<h2> 有過不良紀錄 </h2>
+				</td>
+				<td>
+					<div class="c100 p80 rank3">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			
+		<% when 9 %>
+			<tr>
+				<td>
+					<h2> 有過不良紀錄 </h2>
+				</td>
+				<td>
+					<div class="c100 p90 rank2">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+
+		<% when 10%>
+			<tr>
+				<td>
+					<h2> 目前狀況良好 </h2>
+				</td>
+				<td>
+					<div class="c100 p100 rank1">
+						<span><%= @credit_rank %></span>
+						<div class="slice">
+							<div class="bar"></div>
+							<div class="fill"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		<% end %>
+
+	</td>
+</table>
 
 

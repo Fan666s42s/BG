@@ -2,7 +2,7 @@
 
 <%= render '/shared/title', title: '奧客紀錄'%>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Phone</th>
@@ -19,7 +19,7 @@
         <td><%= link_to 'Show', badguest ,class:'btn-success'%></td>
         <% if logged_in? %>
           <td><%= link_to 'Edit', edit_badguest_path(badguest) %></td>
-          <td><%= link_to 'Destroy', badguest, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Destroy', history_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
       </tr>
     <% end %>

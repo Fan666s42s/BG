@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     #尋找使用者
-    store = Store.find_by(tax_ID: params[:tax_ID])   
+    store = Store.find_by(email: params[:email])   
     #驗證使用者，若成功，就建立一個 session，把 user_id 放入 session hash
     if store && store.authenticate(params[:password])
       session[:store_id] = store.id

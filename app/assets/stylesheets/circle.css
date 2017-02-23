@@ -1063,3 +1063,46 @@
 .c100.orange.dark:hover > span {
   color: #e08833;
 }
+
+.c100.rank1 .bar,
+.c100.rank1 .fill {
+  border-color: #00BB00 !important;
+}
+.c100.rank1:hover > span {
+  color: #00BB00;
+}
+
+.c100.rank2 .bar,
+.c100.rank2 .fill {
+  border-color: #82D900 !important;
+}
+.c100.rank2:hover > span {
+  color: #82D900;
+}
+
+.c100.rank3 .bar,
+.c100.rank3 .fill {
+  border-color: #D9B300 !important;
+}
+.c100.rank3:hover > span {
+  color: #D9B300;
+}
+
+.c100.rank4 .bar,
+.c100.rank4 .fill {
+  border-color: #EA7500 !important;
+}
+.c100.rank4:hover > span {
+  color: #EA7500;
+}
+
+
+.c100.rank5 .bar,
+.c100.rank5 .fill {
+  border-color: #BB3D00 !important;
+}
+.c100.rank5:hover > span {
+  color: #BB3D00;
+}
+
+

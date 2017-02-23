@@ -9,7 +9,8 @@ gem 'awesome_print'
 
 gem 'pry'
 
-gem "typedjs-rails"
+gem 'typedjs-rails'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
