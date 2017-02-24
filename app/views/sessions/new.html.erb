@@ -1,18 +1,33 @@
 <%= render '/shared/title', title: '店家登入'%>
 
+<style>
+.well{
+  margin-left: 30%;
+  margin-right:30%;
+  background-color: rgba(255,255,255,0.5);
+
+}
+label{
+
+  font-size:30px;
+}
+</style>
+
 <div class="well">
-  <%= form_tag '/login' do |f| %>
+  <%= form_tag '/login', id:'login_form' do |f| %>
   <div class="form-group">
     <%= label_tag :email %>
     <br>
-    <%= text_field_tag :email, params[:email] %>
+    <%= text_field_tag :email, params[:email], class:"form-control" %>
   </div>
   <div class="form-group">
     <%= label_tag :password %>
     <br>
-    <%= password_field_tag :password, params[:password] %>
+    <%= password_field_tag :password, params[:password], class:"form-control" %>
   </div>
   <br>
-  <%= submit_tag "登入", class: "btn btn-success" %>
+  <div class="text-center">
+    <%= submit_tag "登入", class: "btn btn-lg btn-success" %>
+  </div>
   <% end %>
 </div>

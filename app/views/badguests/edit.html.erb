@@ -1,6 +1,19 @@
-<h1>Editing Badguest</h1>
+<style>
+.jumbotron{
+  margin-left: 30%;
+  margin-right:30%;
+  background-color: rgba(255,255,255,0.5);
+  font-size:30px;
+}
+</style>
 
-<%= render 'form', badguest: @badguest %>
+<%= render '/shared/title', title: '編輯資料'%>
 
-<%= link_to 'Show', @badguest %> |
-<%= link_to 'Back', history_path %>
+<div class="jumbotron text-center">
+
+  <%= render 'form', badguest: @badguest %>
+
+  <br>
+  <%= link_to 'Show', @badguest ,class:'btn btn-lg btn-success', id:'show_btn'%> 
+  <%= link_to 'Back', history_path ,class:'btn btn-lg btn-success', id:'show_btn'%>
+</div>

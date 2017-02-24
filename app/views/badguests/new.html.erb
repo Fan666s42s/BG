@@ -1,5 +1,20 @@
-<h1>New Badguest</h1>
+<style>
+.jumbotron{
+  margin-left: 30%;
+  margin-right:30%;
+  background-color: rgba(255,255,255,0.5);
+  font-size:20px;
+}
+</style>
 
-<%= render 'form', badguest: @badguest %>
+<%= render '/shared/title', title: '舉報奧客'%>
 
-<%= link_to 'Back', badguests_path %>
+<div class="jumbotron text-center">
+
+  <%= render 'form', badguest: @badguest %>
+
+  <br>
+
+  <%= link_to 'Back', badguests_path,class:'btn btn-lg btn-success', id:'show_btn' %>
+
+</div>

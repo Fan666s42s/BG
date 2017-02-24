@@ -1,27 +1,37 @@
-<%= form_for(badguest) do |f| %>
-  <% if badguest.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(badguest.errors.count, "error") %> prohibited this badguest from being saved:</h2>
+<style>
+  .form-group{
+    text-align: center;
+  }
 
-      <ul>
-      <% badguest.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+</style>
+
+
+  <%= form_for(badguest) do |f| %>
+    <% if badguest.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(badguest.errors.count, "error") %> prohibited this badguest from being saved:</h2>
+
+        <ul>
+        <% badguest.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :phone %>
+      <br>
+      <%= f.text_field :phone, class:"form-group" %>
+    </div>
+
+    <div class="field">
+      <%= f.label '惡行' %>
+      <br>
+      <%= f.text_field :desc, class:"form-group" %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit class:"btn btn-lg btn-success"%>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-  </div>
-
-  <div class="field">
-    <%= f.label :desc %>
-    <%= f.text_field :desc %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

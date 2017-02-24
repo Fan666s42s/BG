@@ -2,11 +2,20 @@
 
 <%= render '/shared/title', title: '奧客紀錄'%>
 
-<table class="table">
+<style>
+#history_table{
+  background-color:rgba(255,255,255,0.5);
+  font-size:30px;
+
+}
+
+</style>
+
+<table class="table" id="history_table">
   <thead>
     <tr>
       <th>Phone</th>
-      <th>Desc</th>
+      <th>惡行</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,10 +25,10 @@
       <tr>
         <td><%= badguest.phone %></td>
         <td><%= badguest.desc %></td>
-        <td><%= link_to 'Show', badguest ,class:'btn-success'%></td>
+        <td><%= link_to 'Show', badguest ,class:'btn btn-lg btn-success'%></td>
         <% if logged_in? %>
-          <td><%= link_to 'Edit', edit_badguest_path(badguest) %></td>
-          <td><%= link_to 'Destroy', history_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to 'Edit', edit_badguest_path(badguest) ,class:'btn btn-lg btn-warning'%></td>
+          <td><%= link_to 'Destroy', history_path, method: :delete, data: { confirm: 'Are you sure?' } ,class:'btn btn-lg btn-danger'%></td>
         <% end %>
       </tr>
     <% end %>

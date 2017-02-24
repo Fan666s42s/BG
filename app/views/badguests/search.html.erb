@@ -1,175 +1,187 @@
 <link rel="stylesheet" href="stylesheet/circle.css">
 
+<style>
+.jumbotron{
+  margin-left: 20%;
+  margin-right:20%;
+  background-color: rgba(255,255,255,0.4);
+}
+#search_table{
+  width: 100%;
+}
+</style>
 
-<table>
-	<td>
-		<h1><%= params[:search]%></h1>
-	</td>
+<div class="jumbotron text-center">
+	<table id="search_table">
+		<td>
+			<h1><%= params[:search]%></h1>
+		</td>
 
-	<td>
-		<% case @credit_rank %>
-		<% when 1 %>		
-			<tr>
-				<td>
-					<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
-				</td>
-				<td>
-					<div class="c100 p10 rank5">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+		<td>
+			<% case @credit_rank %>
+			<% when 1 %>		
+				<tr>
+					<td>
+						<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
+					</td>
+					<td>
+						<div class="c100 p10 big rank5">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 
-		<% when 2 %>		
-			<tr>
-				<td>
-					<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
-				</td>
-				<td>
-					<div class="c100 p20 rank5">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 2 %>		
+				<tr>
+					<td>
+						<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
+					</td>
+					<td>
+						<div class="c100 p20 big rank5">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 
-		<% when 3 %>		
-			<tr>
-				<td>
-					<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
-				</td>
-				<td>
-					<div class="c100 p30 rank5">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 3 %>		
+				<tr>
+					<td>
+						<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
+					</td>
+					<td>
+						<div class="c100 p30 big rank5">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 
-		<% when 4 %>	
-			<tr>
-				<td>
-					<h2> 有許多不良紀錄，若要招待務必三思 </h2>
-				</td>
-				<td>
-					<div class="c100 p40 rank4">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 4 %>	
+				<tr>
+					<td>
+						<h2> 有許多不良紀錄，若要招待務必三思 </h2>
+					</td>
+					<td>
+						<div class="c100 p40 big rank4">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 
-		<% when 5 %>	
-			<tr>
-				<td>
-					<h2> 有許多不良紀錄，若要招待務必三思 </h2>
-				</td>
-				<td>
-					<div class="c100 p50 rank4">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 5 %>	
+				<tr>
+					<td>
+						<h2> 有許多不良紀錄，若要招待務必三思 </h2>
+					</td>
+					<td>
+						<div class="c100 p50 big rank4">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 
-		<% when 6 %>	
-			<tr>
-				<td>
-					<h2> 有許多不良紀錄，若要招待務必三思 </h2>
-				</td>
-				<td>
-					<div class="c100 p60 rank4">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 6 %>	
+				<tr>
+					<td>
+						<h2> 有許多不良紀錄，若要招待務必三思 </h2>
+					</td>
+					<td>
+						<div class="c100 p60 big rank4">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 
-		<% when 7 %>
-			<tr>
-				<td>
-					<h2> 有過不良紀錄 </h2>
-				</td>
-				<td>
-					<div class="c100 p70 rank3">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 7 %>
+				<tr>
+					<td>
+						<h2> 有過不良紀錄 </h2>
+					</td>
+					<td>
+						<div class="c100 p70 big rank3">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-		
-		<% when 8 %>
-			<tr>
-				<td>
-					<h2> 有過不良紀錄 </h2>
-				</td>
-				<td>
-					<div class="c100 p80 rank3">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
-						</div>
-					</div>
-				</td>
-			</tr>
+					</td>
+				</tr>
 			
-		<% when 9 %>
-			<tr>
-				<td>
-					<h2> 有過不良紀錄 </h2>
-				</td>
-				<td>
-					<div class="c100 p90 rank2">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+			<% when 8 %>
+				<tr>
+					<td>
+						<h2> 有過不良紀錄 </h2>
+					</td>
+					<td>
+						<div class="c100 p80 big rank3">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-
-		<% when 10%>
-			<tr>
-				<td>
-					<h2> 目前狀況良好 </h2>
-				</td>
-				<td>
-					<div class="c100 p100 rank1">
-						<span><%= @credit_rank %></span>
-						<div class="slice">
-							<div class="bar"></div>
-							<div class="fill"></div>
+					</td>
+				</tr>
+				
+			<% when 9 %>
+				<tr>
+					<td>
+						<h2> 有過不良紀錄 </h2>
+					</td>
+					<td>
+						<div class="c100 p90 big rank2">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
 						</div>
-					</div>
-				</td>
-			</tr>
-		<% end %>
+					</td>
+				</tr>
 
-	</td>
-</table>
+			<% when 10%>
+				<tr>
+					<td>
+						<h2> 目前狀況良好 </h2>
+					</td>
+					<td>
+						<div class="c100 p100 big rank1">
+							<span><%= @credit_rank %></span>
+							<div class="slice">
+								<div class="bar"></div>
+								<div class="fill"></div>
+							</div>
+						</div>
+					</td>
+				</tr>
+			<% end %>
 
+		</td>
+	</table>
+
+</dvi>
 

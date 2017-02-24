@@ -1,15 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @badguest.phone %>
-</p>
+<style>
+.jumbotron{
+  margin-left: 30%;
+  margin-right:30%;
+  background-color: rgba(255,255,255,0.6);
+}
 
-<p>
-  <strong>Desc:</strong>
-  <%= @badguest.desc %>
-</p>
+</style>
+
+<%= render '/shared/title', title: '瀏覽資料'%>
+
+<div class="jumbotron text-center">
+  <p style="font-size:30px;">
+    <strong>Phone:</strong>
+    <%= @badguest.phone %>
+  </p>
+
+  <p style="font-size:30px;">
+    <strong>惡行:</strong>
+    <%= @badguest.desc %>
+  </p>
+<div>
 
 
-
-<%= link_to 'Back', history_path %>
+<%= link_to 'Back', history_path,class:'btn btn-lg btn-success' %>
