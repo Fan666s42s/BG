@@ -16,5 +16,6 @@
 //= require_tree .
 //= require bootstrap
 //= require typed
+//= require prograssbar
 
 

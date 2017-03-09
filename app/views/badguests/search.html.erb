@@ -13,6 +13,13 @@
 h2{
   font-weight: 700;
 }
+
+#container {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
 </style>
 
 <div class="jumbotron text-center">
@@ -29,13 +36,8 @@ h2{
 						<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
 					</td>
 					<td>
-						<div class="c100 p10 big rank5">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 
@@ -45,13 +47,8 @@ h2{
 						<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
 					</td>
 					<td>
-						<div class="c100 p20 big rank5">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 
@@ -61,13 +58,8 @@ h2{
 						<h2> 極度惡劣的客戶，建議不要提供服務 </h2>
 					</td>
 					<td>
-						<div class="c100 p30 big rank5">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 
@@ -77,13 +69,8 @@ h2{
 						<h2> 有許多不良紀錄，若要招待務必三思 </h2>
 					</td>
 					<td>
-						<div class="c100 p40 big rank4">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 
@@ -93,13 +80,8 @@ h2{
 						<h2> 有許多不良紀錄，若要招待務必三思 </h2>
 					</td>
 					<td>
-						<div class="c100 p50 big rank4">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 
@@ -109,13 +91,8 @@ h2{
 						<h2> 有許多不良紀錄，若要招待務必三思 </h2>
 					</td>
 					<td>
-						<div class="c100 p60 big rank4">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 
@@ -125,13 +102,8 @@ h2{
 						<h2> 有過不良紀錄 </h2>
 					</td>
 					<td>
-						<div class="c100 p70 big rank3">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 			
@@ -141,13 +113,8 @@ h2{
 						<h2> 有過不良紀錄 </h2>
 					</td>
 					<td>
-						<div class="c100 p80 big rank3">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 				
@@ -157,13 +124,8 @@ h2{
 						<h2> 有過不良紀錄 </h2>
 					</td>
 					<td>
-						<div class="c100 p90 big rank2">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>					
 					</td>
 				</tr>
 
@@ -173,13 +135,8 @@ h2{
 						<h2> 目前狀況良好 </h2>
 					</td>
 					<td>
-						<div class="c100 p100 big rank1">
-							<span><%= @credit_rank %></span>
-							<div class="slice">
-								<div class="bar"></div>
-								<div class="fill"></div>
-							</div>
-						</div>
+						<%= content_tag :div, id: "container", data: {creditrank: @credit_rank} do %>
+						<% end %>
 					</td>
 				</tr>
 			<% end %>
@@ -187,5 +144,44 @@ h2{
 		</td>
 	</table>
 
-</dvi>
+</div>
 
+<script>
+
+ProgressBarRun($('#container').data('creditrank'))
+function ProgressBarRun(credit_rank){
+	var bar = new ProgressBar.Circle(container, {
+	// This has to be the same size as the maximum width to
+	// prevent clipping
+	strokeWidth: 4,
+	trailWidth: 1,
+	easing: 'easeInOut',
+	duration: 1400,
+	text: {
+		autoStyleContainer: false
+	},
+	from: { color: '#BB3D00', width: 4 },
+	to: { color: '#00BB00', width: 4 },
+	// Set default step function for all animate calls
+	step: function(state, circle) {
+		circle.path.setAttribute('stroke', state.color);
+		circle.path.setAttribute('stroke-width', state.width);
+
+		var value = Math.round(circle.value() * 10);
+		if (value === 0) {
+		circle.setText('');
+		} else {
+		circle.setText(value);
+		}
+		circle.text.style.color = state.color;
+	}
+	});
+
+	bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
+	bar.text.style.fontSize = '5rem';
+
+	bar.animate(credit_rank/10);  // Number from 0.0 to 1.0
+
+}
+	
+</script>
